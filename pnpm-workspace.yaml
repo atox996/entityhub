@@ -1,0 +1,15 @@
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
+trustPolicyIgnoreAfter: 20160 # 14 day
+
+verifyDepsBeforeRun: install
+
+packages:
+  - packages/**
+  - playground
+
+onlyBuiltDependencies:
+  - esbuild
+  - simple-git-hooks

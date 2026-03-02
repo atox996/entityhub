@@ -1,0 +1,45 @@
+{
+  "name": "@entityhub/plugin",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Plugin extension layer for EntityHub runtime.",
+  "author": "atox996 <atox996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/atox996/entityhub#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atox996/entityhub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atox996/entityhub/issues"
+  },
+  "keywords": [
+    "entityhub",
+    "plugin",
+    "extension",
+    "runtime",
+    "ability",
+    "entity-system"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "entityhub": "workspace:*"
+  },
+  "devDependencies": {
+    "entityhub": "workspace:*"
+  }
+}

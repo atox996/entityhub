@@ -1,0 +1,46 @@
+{
+  "name": "entityhub-monorepo",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "build": "pnpm -r run build",
+    "play": "pnpm -C playground run dev",
+    "lint": "pnpm eslint && pnpm tscheck",
+    "eslint": "eslint --cache . --fix",
+    "tscheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks",
+    "release:core": "bumpp --cwd packages/core --tag core-v",
+    "release:plugin": "bumpp --cwd packages/plugin --tag plugin-v"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.6.1",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@types/node": "^25.3.3",
+    "bumpp": "^10.4.1",
+    "eslint": "^10.0.2",
+    "eslint-plugin-format": "^2.0.1",
+    "lint-staged": "^16.3.1",
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "^5.9.3",
+    "unplugin-dts": "1.0.0-beta.6",
+    "vite": "^7.3.1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx --no-install commitlint --edit $1"
+  },
+  "lint-staged": {
+    "*": "eslint --cache --fix"
+  }
+}

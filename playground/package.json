@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@entityhub/plugin": "workspace:*",
+    "entityhub": "workspace:*",
+    "tsx": "^4.21.0"
+  }
+}

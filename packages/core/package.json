@@ -1,0 +1,42 @@
+{
+  "name": "entityhub",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A lightweight entity-centric data management runtime with pluggable abilities.",
+  "author": "atox996 <atox996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/atox996/entityhub#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atox996/entityhub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atox996/entityhub/issues"
+  },
+  "keywords": [
+    "entity",
+    "entity-management",
+    "data-model",
+    "runtime",
+    "event-driven",
+    "typescript"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "eventemitter3": "^5.0.4"
+  }
+}
